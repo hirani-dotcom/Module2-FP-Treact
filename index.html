@@ -9,7 +9,7 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <section>
+    <section id="landing">
         <nav>
             <div class="nav__container">
             <figure class="logo__wrapper"
@@ -17,12 +17,12 @@
             <h1 class="name">TREACT</h1>
             </figure>
             <ul class="nav__links">
-                <li><a class="nav__link" href="#">About</a></li>
-                <li><a class="nav__link" href="#">Blog</a></li>
-                <li><a class="nav__link" href="#">Pricing</a></li>
-                <li><a class="nav__link" href="#">Contact Us</a></li>
-                <li><a class="nav__link" href="#">Login</a></li>
-                <li><a href="#" class="nav__link nav__link--primary" >Sign Up</a></li>
+                <li><a class="nav__link" href="#featured">About</a></li>
+                <li><a class="nav__link" href="#testimonials">Blog</a></li>
+                <li><a class="nav__link" href="#pricing">Pricing</a></li>
+                <li><a class="nav__link" href="#start">Contact Us</a></li>
+                <li><a class="nav__link nocursor" href="#">Login</a></li>
+                <li><a href="#" class="nav__link nav__link--primary nocursor" >Sign Up</a></li>
             </ul>
             <button class="btn__menu" onclick="openMenu()">
                 <i class="fas fa-bars"></i>
@@ -33,54 +33,63 @@
                 </button>
                 <ul class="menu__links">
                     <li class="menu__list">
-                        <a href="#" class="menu__link">About</a>
+                        <a href="#featured" class="menu__link">About</a>
                     </li>
                     <li class="menu__list">
-                        <a href="#" class="menu__link">Blog</a>
+                        <a href="#testimonials" class="menu__link">Blog</a>
                     </li>
                     <li class="menu__list">
-                        <a href="#" class="menu__link">Pricing</a>
+                        <a href="#pricing" class="menu__link">Pricing</a>
                     </li>
                     <li class="menu__list">
-                        <a href="#" class="menu__link">Contact Us</a>
+                        <a href="#start" class="menu__link">Contact Us</a>
                     </li>
                     <li class="menu__list">
-                        <a href="#" class="menu__link">Login</a>
+                        <a href="#" class="menu__link nocursor">Login</a>
                     </li>
                     <li class="menu__list">
-                        <a href="#" class="menu__link">Sign Up</a>
+                        <a href="#" class="menu__link nocursor">Sign Up</a>
                     </li>
                 </ul>
             </div>
             </div>
         </nav>
-            <header class="header__container row">
+        <header>
+        <div class="container">
+            <div class="row">
                 <div class="intro__block">
                     <h1 class="intro__block--title">Beautiful React Templates <span class="purpletext">For You.</span></h1>
                     <p class="intro__block--para">Our templates are easy to setup, understand and customize.  Fully modular components with a variety of pages and components</p>
                     <div class="input-wrapper">
-                        <input type="text" placeholder="Your E-mail Address" />
-                        <button type="button">Get Started</button>
+                        <input type="text" class="input__email" placeholder="Your E-mail Address" />
+                        <button type="button" class="input__email--btn">Get Started</button>
+                    </div>
+                    <div class="input__wrapper">
+                        <input type="text" class="input__email" placeholder="Your E-mail Address"/>
+                        <button type="button" class="input__email--btn">Get Started</button>
                     </div>
                     <div class="intro__customers">
                         <p>OUR TRUSTED CUSTOMERS</p>
                         <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="" class="customer__banner">
                     </div>
                 </div>
-                <div class="intro__img--wrapper">
+                <figure class="intro__img--wrapper">
                     <img src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="" class="intro__img">
-                </div>
-            </header>
+                </figure>
+            </div>
+        </div>
+        </header>
+    </section>
 
-            <section id="featured">
-                <div class="container">
+        <section id="featured">
+            <div class="container">
                     <div class="section__tag"><span class="purpletext">FEATURES</span></div>
                     <div class="section__title">We Have Amazing <span class="purpletext">Service.</span></div>
-                    <p class="section__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatum repellendus, cupiditate molestiae laborum quasi aliquam facere nesciunt, sint dolorem dolorum iste animi commodi illum! Natus ducimus similique numquam facilis!</div>
+                    <p class="section__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatum repellendus, cupiditate molestiae laborum quasi aliquam facere nesciunt, sint dolorem dolorum iste animi commodi illum! Natus ducimus similique numquam facilis!</p>
                     </p>
-                </div>
+            </div>
 
-                <div class="features__container">
+            <div class="features__container">
                 <div class="features__row">
                     <div class="feat__wrap">
                         <figure>
@@ -135,12 +144,10 @@
                             <h2>Easy</h2>
                             <p class="feat__para">exercitationem delectus incidunt vitae labore, enim officiis suscipit consectetur ex facere ullam voluptate nisi? Corrupti, veritatis. Beatae, atque!<p>
                         </div>
-                    </div>
-                    
+                    </div>                    
                 </div>
-                </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
             <section id="designdevelop">
                 <div class="container">
@@ -167,25 +174,26 @@
                 <div class="container">
                     <div class="row">
                         <figure class="steps__img--wrapper">
-                            <img src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Dashboard Screenshot" class="steps__img"><svg viewBox="0 0 1280 1280" class="steps__grid" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <path id="line-of-balls" d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z"></path>
-                </defs>
+                            <img src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Dashboard Screenshot" class="steps__img">
+                            <svg viewBox="0 0 1280 1280" class="steps__grid" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <path id="line-of-balls" d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z"></path>
+                                </defs>
 
-                <!-- Repeat the line 10 times with vertical spacing -->
-                <g fill="rgba(100, 21, 255, 0.15)">
-                  <use href="#line-of-balls" transform="translate(0, 0)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 100)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 200)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 300)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 400)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 500)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 600)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 700)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 800)"></use>
-                  <use href="#line-of-balls" transform="translate(0, 900)"></use>
-                </g>
-              </svg>
+                                <!-- Repeat the line 10 times with vertical spacing -->
+                                <g fill="rgba(100, 21, 255, 0.15)">
+                                    <use href="#line-of-balls" transform="translate(0, 0)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 100)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 200)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 300)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 400)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 500)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 600)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 700)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 800)"></use>
+                                    <use href="#line-of-balls" transform="translate(0, 900)"></use>
+                                </g>
+                            </svg>
                         </figure>
                         <div class="steps-description">
                             <h4 class="section__tag"><span class="purpletext">STEPS</span></h4>
@@ -217,6 +225,7 @@
                     </div>
                 </div>
             </section>
+
             <section class="values">
                 <div class="container">
                     <div class="row">
@@ -261,9 +270,10 @@
                     </div>
                 </div>
             </section>
-            <section class="pricing">
-                <div class="row__container">
-                    <div class="row__pricing">
+
+            <section id="pricing">
+                <div class="container">
+                    <div class="row">
                         <div class="section__tag purpletext">PRICING</div>
                         <h2 class="section__title">Reasonable & Flexible <span class="purpletext">&nbspPlans.</span></h2><p class="section__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa in vitae optio consequuntur commodi aperiam blanditiis minus laboriosam neque, fugit ut reprehenderit suscipit praesentium, illum eos rerum, laudantium vel magnam?</p>
                     <div class="plans">
@@ -393,7 +403,6 @@
                     </div>
                 </div>
             </section>
-    </section>
 </body>
 <footer>
     <svg viewBox="0 0 600 600" class="footer__blob--1">
@@ -410,38 +419,38 @@
         <div class="footer__columns">
             <div class="footer__column">
                 <div class="footer__column--title">MAIN</div>
-                <a class="footer__column--link">Blog</a>
-                <a class="footer__column--link">FAQs</a>
-                <a class="footer__column--link">Support</a>
-                <a class="footer__column--link">About Us</a>
+                <a href="#testimonials" class="footer__column--link">Blog</a>
+                <a class="footer__column--link nocursor">FAQs</a>
+                <a href="#start" class="footer__column--link">Support</a>
+                <a href="#featured" class="footer__column--link">About Us</a>
             </div>
             <div class="footer__column">
                 <div class="footer__column--title">PRODUCT</div>
-                <a class="footer__column--link">Log In</a>
-                <a class="footer__column--link">Personal</a>
-                <a class="footer__column--link">Business</a>
-                <a class="footer__column--link">Team</a>
+                <a class="nocursor footer__column--link">Log In</a>
+                <a href="#pricing" class="footer__column--link">Personal</a>
+                <a href="#pricing" class="footer__column--link">Business</a>
+                <a class="footer__column--link nocursor">Team</a>
             </div>
             <div class="footer__column">
                 <div class="footer__column--title">PRESS</div>
-                <a class="footer__column--link">Logos</a>
-                <a class="footer__column--link">Events</a>
-                <a class="footer__column--link">Stories</a>
-                <a class="footer__column--link">Office</a>
+                <a class="footer__column--link nocursor">Logos</a>
+                <a class="footer__column--link nocursor">Events</a>
+                <a href="#testimonials"  class="footer__column--link">Stories</a>
+                <a href="#start" class="footer__column--link">Office</a>
             </div>
             <div class="footer__column">
                 <div class="footer__column--title">TEAM</div>
-                <a class="footer__column--link">Career</a>
-                <a class="footer__column--link">Founders</a>
-                <a class="footer__column--link">Culture</a>
-                <a class="footer__column--link">Onboarding</a>
+                <a class="footer__column--link nocursor">Career</a>
+                <a class="footer__column--link nocursor">Founders</a>
+                <a class="footer__column--link nocursor">Culture</a>
+                <a class="footer__column--link nocursor">Onboarding</a>
             </div>
             <div class="footer__column">
                 <div class="footer__column--title">LEGAL</div>
-                <a class="footer__column--link">GDPR</a>
-                <a class="footer__column--link">Privacy Policy</a>
-                <a class="footer__column--link">Terms fo Service</a>
-                <a class="footer__column--link">Disclaimer</a>
+                <a class="footer__column--link nocursor">GDPR</a>
+                <a class="footer__column--link nocursor">Privacy Policy</a>
+                <a class="footer__column--link nocursor">Terms of Service</a>
+                <a class="footer__column--link nocursor">Disclaimer</a>
             </div>
         </div>
         </div>
@@ -453,13 +462,13 @@
             </div>
             <div class="footer__copyright">© 2025 Treact Inc. All Rights Reserved.</div>
             <div class="footer__socials">
-                <a class="footer__social--link"><img src="./assets/facebook-f-brands-solid-full.svg" alt="" class="footer__social--img">
+                <a href="https://facebook.com" class="footer__social--link"><img src="./assets/facebook-f-brands-solid-full.svg" alt="" class="footer__social--img">
                 </a>
-                <div class="footer__social--link"><img src="./assets/x-twitter-brands-solid-full.svg" alt="" class="footer__social--img">
-                </div>
-                <div class="footer__social--link"><img src="./assets/youtube-brands-solid-full.svg" alt="" class="footer__social--img">
+                <a href="https://x.com/" class="footer__social--link"><img src="./assets/x-twitter-brands-solid-full.svg" alt="" class="footer__social--img">
+                </a>
+                <a href="https://youtube.com/" class="footer__social--link"><img src="./assets/youtube-brands-solid-full.svg" alt="" class="footer__social--img">
                     </button>
-                </div>
+                </a>
             </div>
     </div>
 
