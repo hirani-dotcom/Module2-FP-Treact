@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     max-width: 1280px;
+    transition: all 300ms ease;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: #243e63;
@@ -24,7 +25,7 @@ button:hover {
 
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1100px;
     padding: 96px 0;
     margin: 0 24px;
     display: flex;
@@ -44,14 +45,20 @@ button:hover {
 
 .section__tag, .section__para, .section__title {
     width: 100%;
-    max-width: 768px;
-    margin: 0 8px;
+    max-width: 1280px;
+    padding: 0 ;
+    margin: 0 0px;
     align-content: center;
     text-align: center;
     padding-bottom: 12px;
 }
 
+.section__para--narrow {
+    padding: 0 96px;
+}
+
 .section__tag {
+    padding-top: 32px;
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 1.8px;
@@ -66,7 +73,7 @@ button:hover {
     font-size: 18px;
 }
 
-.nocursor {cursor: none;}
+.nocursor {cursor:not-allowed;}
 
 /* Nav Bar */
 
@@ -233,7 +240,8 @@ header {
 
 header .row {
     flex-direction: row;
-    width: 100%;max-width: 1200px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .intro__block {
@@ -318,40 +326,34 @@ header .row {
     align-items: center;
 }
 
-.features__row {
-    width: 100%;
-    max-width: 1280px;
-    padding: 0 24px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .features__container {
     width: 100%;
     margin: 0;
     padding: 36px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.feat__wrapper {  
-    padding-bottom: 40px;
+.features__row {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 24px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .feat__wrap {
     width: calc(100%/3);
     display: flex;
-    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 12px;
 }
 
-.feat__para {
-    display: flex;
-    line-height: 1.5;
-    padding-top: 12px;
+.feat__wrapper {
+    flex-direction: column;
+    padding-left: 12px;
 }
 
 .feat__icon {
@@ -708,7 +710,7 @@ header .row {
 }
 
 .testimonial__section {
-    padding-left: 24px;
+    padding: 24px;
     width: 100%;
 }
 
@@ -729,10 +731,10 @@ header .row {
     font-weight: bold;
 }
 
-.testimonial__para, .testimonial__section section__para {
+.testimonial__para, .testimonial__section {
     line-height: 1.625;
     font-size: 18px;
-    max-width: 580px;
+    max-width: 100%;
 }
 
 .testimonial__bottom {
@@ -758,7 +760,7 @@ header .row {
 .testimonial__profimg {
     width: 80px;
     height: 80px;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .testimonial__name {
@@ -931,7 +933,6 @@ footer {
 
 .footer__row {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 48px;
     display: flex;
@@ -1063,9 +1064,22 @@ a {
     transform: scale(0.5);
 }
 
-/* Make email button better on smaller screen */
+/* 
 
-@media(max-width:1056px) {
+    Make email button better on smaller laptop/desktop screen 
+
+*/
+
+@media(max-width:1024px) {
+
+* {max-width: 768px;}
+
+.step {
+    justify-content: center;
+    text-align: center;
+}
+
+/* .container {max-width: 768px;} */
 
 .input-wrapper {display: none;}
 
@@ -1092,22 +1106,6 @@ a {
     color: white;
     cursor: pointer;
     border-radius: 25px;
-}
-}
-
-
-/* smartphones & tablets */
-
-@media(max-width: 768px) {
-
-.nav__container {
-    justify-content: space-between;
-
-}
-
-.menu__link {
-    font-size: 18px;
-    font-weight: normal;
 }
 
 header .row {
@@ -1146,11 +1144,6 @@ header .button, input {
     width: 100%;
 }    
 
-.feat__wrap {
-    width: calc(100%/2);
-}
-
-
 #designdevelop{
     width: 100%;
     flex-direction: column;align-items: center;
@@ -1165,6 +1158,7 @@ header .button, input {
 
 .desdev__wrapper{
     width: 100%;
+    text-align: center;
 } 
 
 .desdev__img--wrapper {
@@ -1172,10 +1166,94 @@ header .button, input {
     width: 100%;
 }
 
-.quality__button {
+.steps__grid {
+    transform: translateX(-50%) translateY(-20%);
+  }
+
+.steps__description {
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 32px;
+  }
+
+#steps .section__tag {
+    padding-top: 140px;
+}
+
+#steps .section__para {
+    max-width: 768px;
+}
+
+.values__description, .values__img--wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.values__list {
+    padding: 32px;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.testimonial {
     text-align: center;
 }
 
+.testimonial__rating {
+    justify-content: center;
+}
+
+.testimonial__img {
+    width: 100%;
+}
+
+.testimonial__bottom {
+    flex-direction: column;
+    gap: 24px;
+}
+}
+
+
+/* 
+
+    Smartphones & Tablets 
+
+*/
+
+@media(max-width: 768px) {
+
+.nav__container {
+    justify-content: space-between;
+
+}
+
+.section__para--narrow {
+    padding: 0 24px;
+}
+
+.menu__link {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.feat__wrap {
+    width: calc(100%/2);
+    display: flex;
+}
+
+.feat__wrapper {
+    flex-direction: column;
+}
+
+.quality__button {
+    text-align: center;
+}
 
 #steps .row {
     flex-direction: column;
@@ -1195,6 +1273,10 @@ header .button, input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#steps .section__tag {
+    padding-top: 4px;
 }
 
 .values__row {
@@ -1218,7 +1300,6 @@ header .button, input {
 .value__name {
     margin-left: 4px;
 }
-
 
 .values__button {
     display: flex;
@@ -1328,4 +1409,55 @@ header .button, input {
 .nav__link {
     display: none;
 }
+}
+
+/* Smaller Smartphones */
+
+@media (max-width:640px) {
+
+* {max-width: 550px;}
+
+.container {
+    padding: 48px 0;
+}
+
+.section__tag {
+    font-size: 20px;
+}
+
+.section__title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section__para {
+    font-size: 18px;
+}
+
+.section__para--narrow {
+    text-align: center;
+}
+
+#steps .section__tag {
+    padding-top: 32px;
+}
+
+.feat__wrap {
+    width: 100%;
+    padding-top: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feat__wrapper {
+    padding-top: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+  .steps__grid {
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
