@@ -25,9 +25,8 @@ button:hover {
 
 .container {
     width: 100%;
-    max-width: 1100px;
     padding: 96px 0;
-    margin: 0 24px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,18 +79,18 @@ button:hover {
 nav {
     height: 80px;
     padding-top: 24px;
-    padding-left: 24px;padding-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     display: flex;
     justify-content: center;
 }
 
 .nav__container {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 12px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -236,17 +235,20 @@ li {list-style-type: none;}
 
 header {
     height: calc(100vh-80px);
+    width: 100%;
 }
 
 header .row {
     flex-direction: row;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .intro__block {
-    width: 40%;
-    padding-left: 2%;
+    width: 60%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,7 +309,7 @@ header .row {
 
 .intro__img--wrapper {
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
 }
 
 .intro__img {
@@ -319,7 +321,6 @@ header .row {
 #featured {
     width: 100%;
     max-width: 1280px;
-    margin: 0 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -489,7 +490,7 @@ header .row {
 
   /* Values Section */
 
-  #values {
+  .values {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -778,12 +779,12 @@ header .row {
     align-items: center;
     border: none;
     border-radius: 50px;    
-    background-color: white;
+    background-color: gold, yellow;
 }
 
 .divider {
     margin: 0 8px;
-    color: white;
+    color: ##fff;
 }
 
 .testimonial__button {
@@ -1072,21 +1073,24 @@ a {
 
 @media(max-width:1024px) {
 
-* {max-width: 768px;}
+body {max-width: 768px;}
 
 .step {
     justify-content: center;
     text-align: center;
 }
 
-/* .container {max-width: 768px;} */
+.container {padding: 96px 0;margin: 0;}
 
 .input-wrapper {display: none;}
 
 .input__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
+    margin-bottom: 48px;
 }
 
 .input__wrapper input {
@@ -1111,20 +1115,22 @@ a {
 header .row {
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .intro__block {
     width: 100%;
-    max-width: 568px;
+    max-width: 568px;display: flex;
+    flex-direction: column;
     text-align: center;
     margin-bottom: 36px;
 }
 
 .intro__customers, .customer__banner {
     width: 80%;
-    align-items: center;
+    margin: 0;
 }
 
 .intro__img--wrapper {
@@ -1137,7 +1143,6 @@ header .row {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 480px;
 }
 
 header .button, input {
@@ -1217,6 +1222,8 @@ header .button, input {
     flex-direction: column;
     gap: 24px;
 }
+
+#start {padding: 96px 48px;}
 }
 
 
@@ -1370,7 +1377,6 @@ header .button, input {
     padding: 24px 0;
     font-size: 24px;
     font-weight: normal;
-
 }
 
 .start__buttons {
@@ -1437,6 +1443,18 @@ header .button, input {
 
 .section__para--narrow {
     text-align: center;
+}
+
+.input__wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.intro__customers {
+    width: 80%;
+    padding-top: 24px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 #steps .section__tag {
